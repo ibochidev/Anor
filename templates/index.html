@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for i in car %}
+    <div class="card" style="width: 18rem;">
+        <img src="http://127.0.0.1:8000/media/{{ i.image }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Modeli: {{ i.name }}</h5>
+                <p class="card-text">Ranngi: {{ i.color }}</p>
+                <p class="card-text">yili: {{ i.year }}</p>
+                <a href="#" class="btn btn-primary">Sotib olish</a>
+            </div>
+    </div>
+    {% endfor %}
+{% endblock content %}

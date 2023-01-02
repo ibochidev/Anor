@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <form  method="post">
+    {% csrf_token %}
+        <div class="alert alert-primary" role="alert">
+            Yangi mashina qo`shish
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Nomi</span>
+            <input type="text" name="nomi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Ranngi</span>
+            <input type="text" name="ranggi" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-sizing-default">Yili</span>
+            <input type="text" name="yili" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Rasm biriktiring</label>
+            <input class="form-control" type="file" name="image" id="formFile">
+        </div>
+            <button class="btn btn-primary" type="submit">Saqlash</button>
+    </form>
+{% endblock content %}
